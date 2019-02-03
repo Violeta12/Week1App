@@ -1,0 +1,106 @@
+﻿@page
+@model Week1App.pages.taghelpplayModel
+@{
+    Layout = null;
+}
+@addTagHelper*,Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>taghelpplay</title>
+</head>
+<body>
+
+    <form method="post">
+        <label asp-for=Number1>Enter your (int) number  </label>
+        <input asp-for=Number1 />
+        <button type="submit">Press Here</button>
+
+        <label asp-for=Number2>Enter your (int?) number  </label>
+        <input asp-for=Number2 />
+        <button type="submit">Press Here</button>
+
+        <label asp-for=Number3>Enter your (double) number  </label>
+        <input asp-for=Number3 />
+        <button type="submit">Press Here</button>
+
+        <label asp-for=Number4>Enter your (double?) number  </label>
+        <input asp-for=Number4 />
+        <button type="submit">Press Here</button>
+
+        <label asp-for=Number5>Enter your (decimal) number  </label>
+        <input asp-for=Number5 />
+        <button type="submit">Press Here</button>
+
+        <label asp-for=Number6>Enter your (decimal?) number  </label>
+        <input asp-for=Number6 />
+        <button type="submit">Press Here</button>
+
+        <label asp-for=Number7>Enter your (float) number  </label>
+        <input asp-for=Number7 />
+        <button type="submit">Press Here</button>
+
+        <label asp-for=Number8>Enter your (float?) number  </label>
+        <input asp-for=Number8 />
+        <button type="submit">Press Here</button>
+
+        <label asp-for=Number9>Enter your (string) number  </label>
+        <input asp-for=Number9 />
+        <button type="submit">Press Here</button>
+
+        <label asp-for=Number10>Enter your datetime </label>
+        <input asp-for=Number10 />
+        <button type="submit">Press Here</button>
+
+        <label asp-for=Number11>Enter your datetime? </label>
+        <input asp-for=Number11 />
+        <button type="submit">Press Here</button>
+
+        <label asp-for=Number12>Is Contact Allowed? </label>
+        <input asp-for=Number12
+               value="Y"
+               data-val="true"
+               data-val-required="The Number12 field is required" />
+        <button type="submit">Press Here</button>
+
+        <fieldset>
+            <legend>Choose one from the list below</legend>
+            <input type="radio" name="season" value="Summer" id="summer" /><label for="summer">Summer</label>
+            <input type="radio" name="season" value="Autumn" id="autumn" /><label for="autumn">Autumn</label>
+            <input type="radio" name="season" value="Winter" id="winter" /><label for="winter">Winter</label>
+            <input type="radio" name="season" value="Spring" id="spring" /><label for="spring">Spring</label>
+        </fieldset>
+
+
+    </form>
+    <h1>@Model.Message1</h1>
+    <h2>@Model.Message2</h2>
+    <h3>@Model.Message3</h3>
+    <h4>@Model.Message4</h4>
+    <h5>@Model.Message5</h5>
+    <h6>@Model.Message6</h6>
+    <h7>@Model.Message7</h7>
+    <h8>@Model.Message8</h8>
+    <h9>@Model.Message9</h9>
+    <h10>@Model.Message10</h10>
+    <h11>@Model.Message11</h11>
+    <h12>@Model.Message12</h12>
+
+
+    <h13>Seasons</h13>
+
+
+    <ul>
+        @foreach (string season in Model.Season)
+        {
+            <li>@season</li>
+        }
+
+    </ul>
+
+
+</body>
+</html>
