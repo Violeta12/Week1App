@@ -1,0 +1,38 @@
+﻿@page
+@model Week1App.pages.ws1Model
+@{
+    Layout = null;
+}
+@addTagHelper*,Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ws1</title>
+</head>
+<body>
+
+    <h1>All about country</h1>
+
+
+    <ul>
+        @foreach (string country in Model.MyTestArray)
+        {
+            <li>@country</li>
+        }
+
+    </ul>
+
+    <form method="post">
+        <label for="FirstName">Enter Your Name</label>
+        <input type="text" name="FirstName" />
+        <button type="submit">Press Here</button>
+
+    </form>
+
+    <h2>@Model.Message</h2>
+
+</body>
+</html>

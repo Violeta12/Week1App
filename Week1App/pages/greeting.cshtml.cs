@@ -22,5 +22,7 @@ namespace Week1App.pages
         }
 
         public string Message { get; set; } = "Hello from razor page";
+
+
     }
 }
