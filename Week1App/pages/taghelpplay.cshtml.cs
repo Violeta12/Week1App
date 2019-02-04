@@ -26,6 +26,7 @@ namespace Week1App.pages
         public string Message10 { get; set; } = "";
         public string Message11 { get; set; } = "";
         public string Message12 { get; set; } = "";
+        
 
         [BindProperty]
         public int Number1 { get; set; }
@@ -39,7 +40,9 @@ namespace Week1App.pages
         public string Number9 { get; set; }
         public DateTime Number10 { get; set; }
         public DateTime? Number11 { get; set; }
-        public string Number12 { get; set; }
+        public bool Number12 { get; set; }
+
+
 
         public string[] Season { get; set; }
             = { "Summer", "Autumn", "Winter", "Spring" };
@@ -47,7 +50,7 @@ namespace Week1App.pages
 
         public void OnPost(int Number1, int? Number2, double Number3, double? Number4, decimal Number5,
             decimal? Number6, float Number7, float? Number8, string Number9, DateTime Number10, 
-            DateTime? Number11, string Number12)
+            DateTime? Number11, bool Number12)
         {
             Message1 = $"Number is {Number1}";
             Message2 = $"Number is {Number2}";
@@ -61,6 +64,7 @@ namespace Week1App.pages
             Message10 = $"Number is {Number10}";
             Message11 = $"Number is {Number11}";
             Message12 = $"Value is {Number12}";
+            
 
         }
     }
